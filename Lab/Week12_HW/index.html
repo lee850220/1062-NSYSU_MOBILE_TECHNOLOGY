@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>中山大學</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+
+    <style type="text/css">
+        .url_work {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          left: 588px;
+          top: 637px;
+        }	
+
+        .url_lib {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          left: 504px;
+          top: 430px;
+        }	
+
+        .url_EX {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          left: 546px;
+          top: 741px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div data-role="page" id="home">
+
+        <div data-role="header">
+            <h1>中山大學</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <p align="center">
+                <img src="assets/home.jpg">
+            </p>
+            <p>中山大學</p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" class="ui-btn-active" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="map">
+
+        <div data-role="header">
+            <h1>地圖導覽</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <img src="assets/map.jpg">
+            <a href="#work"><div class="url_work"></div></a>
+            <a href="#lib"><div class="url_lib"></div></a>
+            <a href="#EX"><div class="url_EX"></div></a>
+            
+            <!-------JavaScript顯示滑鼠所在座標 START--------
+            <script language="JavaScript1.2">
+            
+            
+            // Detect if the browser is IE or not.
+            // If it is not IE, we assume that the browser is NS.
+            var IE = document.all?true:false
+            
+            // If NS -- that is, !IE -- then set up for mouse capture
+            if (!IE) document.captureEvents(Event.MOUSEMOVE)
+            
+            // Set-up to use getMouseXY function onMouseMove
+            document.onmousemove = getMouseXY;
+            
+            // Temporary variables to hold mouse x-y pos.s
+            var tempX = 0
+            var tempY = 0
+            
+            // Main function to retrieve mouse x-y pos.s
+            
+            function getMouseXY(e) {
+            if (IE) { // grab the x-y pos.s if browser is IE
+                tempX = event.clientX + document.body.scrollLeft
+                tempY = event.clientY + document.body.scrollTop
+            } else {  // grab the x-y pos.s if browser is NS
+                tempX = e.pageX
+                tempY = e.pageY
+            }  
+            // catch possible negative values in NS4
+            if (tempX < 0){tempX = 0}
+            if (tempY < 0){tempY = 0}  
+            // show the position values in the form named Show
+            // in the text fields named MouseX and MouseY
+            document.Show.MouseX.value = tempX
+            document.Show.MouseY.value = tempY
+            return true
+            }
+            
+            
+            </script>
+            <form name="Show">
+            <p align="center"><input type="text" name="MouseX" value="0" size="4">X <input type="text" name="MouseY" value="0" size="4">Y </form>    
+            <!-------JavaScript顯示滑鼠所在座標 END-------->
+    
+
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" class="ui-btn-active" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="list">
+
+        <div data-role="header">
+            <h1>景點列表</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <ul data-role="listview" data-theme="g">
+                <li><a href="#work">行政大樓</a></li>
+                <li><a href="#lib">圖資大樓</a></li>
+                <li><a href="#EX">逸仙館</a></li>
+            </ul>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" class="ui-btn-active" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="tip">
+
+        <div data-role="header">
+            <h1>使用說明</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <ul>
+                <li>可由「地圖導覽」或「景點列表」選取景點。</a></li>
+                <li>「地圖導覽」模式中，在圓形標示點按一下滑鼠左鍵即可進入「景點導點」頁面。</a></li>
+                <li>「景點列表」模式中，點按景點名稱即可進入「景點導點」頁面。</a></li>
+            </ul>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" class="ui-btn-active" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="work">
+
+        <div data-role="header">
+            <h1>行政大樓</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <p align="center">
+                <img src="http://farm4.static.flickr.com/3057/2398949814_45c6ff4fc0.jpg">
+            </p>
+            <p>行政大樓</p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" class="ui-btn-active" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="lib">
+
+        <div data-role="header">
+            <h1>圖資大樓</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <p align="center">
+                <img src="http://resource.osa.nsysu.edu.tw/ezfiles/266/1266/pictures/937/part_119901_1180947_48701.jpg">
+            </p>
+            <p>圖資大樓</p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" class="ui-btn-active" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="EX">
+
+        <div data-role="header">
+            <h1>逸仙館</h1>
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <p align="center">
+                <img src="http://resource.osa.nsysu.edu.tw/ezfiles/266/1266/pictures/947/part_87918_3994126_15327.jpg">
+            </p>
+            <p>逸仙館</p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" class="ui-btn-active" data-icon="home">回首頁</a>
+                    </li>
+                    <li>
+                        <a href="#map" data-icon="grid">地圖導覽</a>
+                    </li>
+                    <li>
+                        <a href="#list" data-icon="star">景點列表</a>
+                    </li>
+                    <li>
+                        <a href="#tip" data-icon="info">使用說明</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+
+</body>
+
+</html>

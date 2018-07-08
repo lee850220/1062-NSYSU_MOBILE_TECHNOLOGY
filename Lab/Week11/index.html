@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Home</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		
+		<ul data-role="listview" data-theme="g">
+			<li><a href="#p1" data-rel="dialog" data-transition="pop">
+				<img src="images/album-bb.jpg" />
+				<h3>第一頁</h3>
+				<p>Broken Bells</p>
+			</a></li>
+			<li><a href="#p2" data-rel="dialog" data-transition="slidedown">
+				<img src="images/album-hc.jpg" />
+				<h3>第二頁</h3>
+				<p>Broken Bells</p>
+			</a></li>
+			
+		</ul>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="p1">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="p2">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
